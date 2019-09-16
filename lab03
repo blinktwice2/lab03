@@ -1,0 +1,40 @@
+def port (port_number):
+    port_number = int(port_number)
+    print(port_number)
+    return ("Port:", port_number)
+
+def port_range(port_number):
+    if 0 <= port_number <= 1023:
+        return("Range: System")
+    elif 1024 <= port_number <= 49151:
+        return("Range: User:")
+    elif 49152 <= port_number <= 65535:
+        return("Range: Dynamic")
+    elif 65536 <= port_number:
+        return("Range: Unkown:")
+
+def category(port_number):
+    x = port_number
+    if x == 20 or x == 53 or x == 80 or x == 443 or x == 445:
+        return("Category: Data")
+    elif x == 22 or x == 23:
+        return("Category: Remote")
+    elif x == 67 or x == 68 or x == 123 or x == 514:
+        return("Category: Ops")
+    elif x == 666:
+        return("Category: Game")
+    elif x == 6665 or x == 6666 or x == 6667 or x == 6668 or x == 6669:
+        return("Category: Comms")
+    else:
+        return("Category: Unknown")
+
+def protocol_short(port_number):
+    
+    
+    
+
+
+#port(5)
+#port_range(5)
+#category(6767)
+
